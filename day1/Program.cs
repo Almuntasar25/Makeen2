@@ -1,5 +1,34 @@
-﻿using System.Reflection;
 
+//Problem of the Day:
+// Birthday Cake Candles
+
+// Task:
+// Count how many candles are the tallest.
+
+// Description:
+// You are given a list of integers representing the height of each candle. You need to determine how many candles are the tallest.
+
+// Example:
+// If candles = [4, 1, 4, 3],
+// the tallest candles are 4 units high,
+// and there are 2 candles with this height.
+
+// So, the function should return 2.
+
+// Input:
+// A list of space-separated integers representing candle heights.
+
+// Sample Inputs and Outputs:
+
+
+// Input	Output
+// 4 1 4 3	2
+// 3 2 1 3	2
+// 1 2 3 4 5 5	2
+// 7	1
+// Return:
+// The number of candles that are the tallest.
+﻿using System.Reflection;
 namespace ProplemOfAday
 {
     internal class Program
