@@ -1,0 +1,75 @@
+
+//Problem of the Day:
+//Colored Balls Triangle
+
+//Task:
+//Given two integers white and black representing the count of white and black balls, return the maximum height of the triangle that can be achieved.
+
+//Rules:
+
+//The triangle consists of rows where each row contains balls of only one color.
+
+//The first row must always be white.
+
+//The number of balls in each row increases by one (i.e., row 1 has 1 ball, row 2 has 2 balls, etc.).
+
+//Alternate the colors starting from white (i.e., row 1 white, row 2 black, row 3 white, ...).
+
+//Stop when you don't have enough balls of the required color to build the next row.
+
+//Input:
+//Two integers(space-separated):
+
+//white: number of white balls(1 ≤ white ≤ 100)
+
+//black: number of black balls(1 ≤ black)
+
+//Output:
+//An integer: the maximum height of the triangle.
+
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.ComponentModel;
+using System.Drawing;
+
+
+namespace Day2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter black:");
+
+            int black = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter white:");
+            int white =Convert.ToInt32(Console.ReadLine());
+            int hight = 0;
+            for (int i = 1; i < 100; i++)
+            {
+                if ((i % 2) == 0)
+                {
+                    if (black >= i)
+                    {
+                        black--;
+                        Console.WriteLine($"lin: {++hight} black");
+                    }
+                    else { break; }
+                }
+                else
+                {
+                    if (white >= i)
+                    {
+                        white--;
+                        Console.WriteLine($"lin: {++hight} white ");
+                    }
+                    else { break; }
+                }
+            }
+            Console.WriteLine($"The hight: {hight}");
+        }
+       
+
+    }
+}
+
